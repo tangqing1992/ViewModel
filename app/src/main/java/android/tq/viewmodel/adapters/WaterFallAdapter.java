@@ -49,6 +49,7 @@ public class WaterFallAdapter  extends RecyclerView.Adapter<WaterFallAdapter.Bas
         holder.text_position.setText(datalists.get(position));
 
 
+
     }
     @Override
     public int getItemCount() {
