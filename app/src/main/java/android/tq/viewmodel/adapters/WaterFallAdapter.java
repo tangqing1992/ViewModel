@@ -28,7 +28,7 @@ public class WaterFallAdapter  extends RecyclerView.Adapter<WaterFallAdapter.Bas
 
         //通过获取随机数存入集合
         for (int i = 0; i < datalists.size(); i++) {
-            int x = new Random().nextInt(200) + 400;
+            int x = new Random().nextInt(200) + 200;
             heights.add(x);
         }
 
@@ -44,7 +44,7 @@ public class WaterFallAdapter  extends RecyclerView.Adapter<WaterFallAdapter.Bas
         //获取控件原本高度，拿随机数集合赋值
         ViewGroup.LayoutParams layoutParams = holder.layout_params.getLayoutParams();
         layoutParams.height = heights.get(position);
-        layoutParams.width = context.getResources().getDisplayMetrics().widthPixels/3;
+        layoutParams.width = ViewGroup.LayoutParams.MATCH_PARENT /*context.getResources().getDisplayMetrics().widthPixels/3*/;
         holder.layout_params.setLayoutParams(layoutParams);
         holder.text_position.setText(datalists.get(position));
 
