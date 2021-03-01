@@ -9,7 +9,7 @@ import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity {
 
-    Button bnt_vertical,bnt_recy,bnt_pickerView;
+    Button bnt_vertical,bnt_recy,bnt_pickerView,bnt_grid;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -20,6 +20,8 @@ public class MainActivity extends AppCompatActivity {
         bnt_recy.setOnClickListener(onClickListener);
         bnt_pickerView = findViewById(R.id.bnt_pickerView);
         bnt_pickerView.setOnClickListener(onClickListener);
+        bnt_grid = findViewById(R.id.bnt_grid);
+        bnt_grid.setOnClickListener(onClickListener);
     }
 
     View.OnClickListener onClickListener = new View.OnClickListener() {
@@ -34,7 +36,8 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(new Intent(MainActivity.this,RecyclerVerticalVideosActivity.class));
             if (id ==R.id.bnt_pickerView)
                 startActivity(new Intent(MainActivity.this,PickerViewActivity.class));
-
+            if (id ==R.id.bnt_grid)
+                startActivity(new Intent(MainActivity.this,WaterfallActivity.class));
         }
     };
 }

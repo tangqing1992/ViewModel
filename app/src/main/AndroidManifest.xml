@@ -19,6 +19,7 @@
         <activity android:name=".VerticalVideoActivity"/>
         <activity android:name=".RecyclerVerticalVideosActivity"/>
         <activity android:name=".PickerViewActivity"/>
+        <activity android:name=".WaterfallActivity"/>
 
     </application>
 
